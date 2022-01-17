@@ -1,4 +1,4 @@
-package com.example.parserwithweb.methods;
+package com.example.parserwithweb.modules.VI.methods;
 
 import org.jsoup.Jsoup;
 

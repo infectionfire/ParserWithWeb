@@ -2,12 +2,13 @@ package com.example.parserwithweb.model;
 
 import java.io.IOException;
 
-import static com.example.parserwithweb.config.StructureCardBuilder.BuildDescription;
+import static com.example.parserwithweb.modules.VI.config.StructureCardBuilder.BuildDescription;
 
-public class Greeting {
+public class Search {
 
     private long id;
     private String content;
+
 
     public long getId() {
         return id;
@@ -22,8 +23,7 @@ public class Greeting {
     }
 
     public void setContent(String content) throws IOException {
-        content = BuildDescription(content);
-        this.content = content;
+           this.content = BuildDescription(content);
     }
 
 }

@@ -1,12 +1,9 @@
-package com.example.parserwithweb.config;
+package com.example.parserwithweb.modules.VI.config;
 
 
 import java.io.File;
 import java.io.IOException;
 import java.io.PrintWriter;
-
-import static com.example.parserwithweb.config.StructureCardBuilder.BuildDescriptions;
-import static com.example.parserwithweb.config.StructureCardBuilder.getTtx;
 
 /**
  * Записывает информацию о товаре в текстовый файл testFile.txt
@@ -20,8 +17,8 @@ public class WriteToFile {
 
     public static void main(String[] args) throws IOException {
         try(PrintWriter pw = new PrintWriter(file)) {
-            BuildDescriptions();
-            pw.println(getTtx());
+            StructureCardBuilder.BuildDescriptions();
+            pw.println(StructureCardBuilder.getTtx());
             pw.println("Successfully!");
         }
     }

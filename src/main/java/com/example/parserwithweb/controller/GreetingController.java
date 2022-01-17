@@ -1,26 +1,24 @@
 package com.example.parserwithweb.controller;
 
-import com.example.parserwithweb.model.Greeting;
+import com.example.parserwithweb.model.Search;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-
-import java.io.IOException;
+import org.springframework.web.bind.annotation.PostMapping;
 
 @Controller
 public class GreetingController {
 
-    @RequestMapping(value="/greeting", method=RequestMethod.GET)
+    @GetMapping(value="/")
     public String greetingForm(Model model) {
-        model.addAttribute("greeting", new Greeting());
+        model.addAttribute("search", new Search());
         return "greeting";
     }
 
-    @RequestMapping(value="/greeting", method= RequestMethod.POST)
-    public String greetingSubmit(@ModelAttribute Greeting greeting, Model model) {
-        model.addAttribute("greeting", greeting);
+    @PostMapping(value="/search")
+    public String greetingSubmit(@ModelAttribute Search search, Model model) {
+        model.addAttribute("search", search);
         return "result";
     }
 

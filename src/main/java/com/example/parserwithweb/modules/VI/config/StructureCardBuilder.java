@@ -1,21 +1,21 @@
-package com.example.parserwithweb.config;
+package com.example.parserwithweb.modules.VI.config;
 
 
-import com.example.parserwithweb.VI.ManualCrawler;
-import com.example.parserwithweb.VI.PhotoCrawler;
+import com.example.parserwithweb.modules.VI.ManualCrawler;
+import com.example.parserwithweb.modules.VI.PhotoCrawler;
 import org.jsoup.nodes.Document;
 
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-import static com.example.parserwithweb.VI.Advantages.createAdvantages;
-import static com.example.parserwithweb.VI.Characteristics.createCharacteristics;
-import static com.example.parserwithweb.VI.Equipment.createComplectation;
-import static com.example.parserwithweb.VI.Features.createFeatures;
-import static com.example.parserwithweb.VI.Weight.createWeight;
-import static com.example.parserwithweb.page_processing.GetPageVI.getPage;
-import static com.example.parserwithweb.page_processing.GetPageVI.getPageFromUrl;
+import static com.example.parserwithweb.modules.VI.Advantages.createAdvantages;
+import static com.example.parserwithweb.modules.VI.Characteristics.createCharacteristics;
+import static com.example.parserwithweb.modules.VI.Equipment.createComplectation;
+import static com.example.parserwithweb.modules.VI.Features.createFeatures;
+import static com.example.parserwithweb.modules.VI.Weight.createWeight;
+import static com.example.parserwithweb.modules.VI.page_processing.GetPageVI.getPage;
+import static com.example.parserwithweb.modules.VI.page_processing.GetPageVI.getPageFromUrl;
 
 
 /**

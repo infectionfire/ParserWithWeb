@@ -1,4 +1,4 @@
-package com.example.parserwithweb.VI;
+package com.example.parserwithweb.modules.VI;
 
 import org.jetbrains.annotations.NotNull;
 import org.jsoup.nodes.Document;

@@ -1,6 +1,6 @@
-package com.example.parserwithweb.VI;
+package com.example.parserwithweb.modules.VI;
 
-import com.example.parserwithweb.methods.HtmlToText;
+import com.example.parserwithweb.modules.VI.methods.HtmlToText;
 import org.jetbrains.annotations.NotNull;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;

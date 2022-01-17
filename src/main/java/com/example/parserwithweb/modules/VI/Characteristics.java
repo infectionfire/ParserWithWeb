@@ -1,4 +1,4 @@
-package com.example.parserwithweb.VI;
+package com.example.parserwithweb.modules.VI;
 
 import org.jetbrains.annotations.NotNull;
 import org.jsoup.nodes.Document;
@@ -7,7 +7,7 @@ import org.jsoup.select.Elements;
 
 import java.io.IOException;
 
-import static com.example.parserwithweb.methods.StringCharacterFormatter.characteristicsFormatter;
+import static com.example.parserwithweb.modules.VI.methods.StringCharacterFormatter.characteristicsFormatter;
 
 /**
  * Формирование поля "технические характеристики" для описания товарной карточки

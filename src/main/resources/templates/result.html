@@ -1,17 +1,22 @@
 <!DOCTYPE HTML>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <title>Getting Started: Handing Form Submission</title>
+    <title>Result</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
 </head>
 <body>
-<h1>Result</h1>
+<form action="#" th:action="@{/search}" th:object="${search}" method="post">
+
+    <p>Url: <input type="text"  th:field="*{content}"></input>
+    <p><input type="submit" value="Submit" /></p>
+</form>
+<h4>Result</h4>
 <div>
-
-<p th:text="'id: ' + ${greeting.id}"></p>
-<p th:text="'content: ' + ${greeting.content}"></p>
-
+<pre>
+<p th:text="${search.content}" />
+</pre>
 </div>
-<a href="/greeting">Submit another message</a>
+
 </body>
 </html>

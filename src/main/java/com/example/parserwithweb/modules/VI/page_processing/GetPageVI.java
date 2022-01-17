@@ -1,4 +1,4 @@
-package com.example.parserwithweb.page_processing;
+package com.example.parserwithweb.modules.VI.page_processing;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -8,7 +8,7 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 
-import static com.example.parserwithweb.methods.ReadingFromFile.readUrlsFromTXTFile;
+import static com.example.parserwithweb.modules.VI.methods.ReadingFromFile.readUrlsFromTXTFile;
 
 public class GetPageVI {
     

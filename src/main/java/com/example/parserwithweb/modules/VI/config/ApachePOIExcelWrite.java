@@ -1,4 +1,4 @@
-package com.example.parserwithweb.config;
+package com.example.parserwithweb.modules.VI.config;
 /*
 this file can be added element of the massive to
  */
@@ -13,7 +13,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-import static com.example.parserwithweb.config.StructureCardBuilder.*;
+import static com.example.parserwithweb.modules.VI.config.StructureCardBuilder.*;
 
 public class ApachePOIExcelWrite {
 
