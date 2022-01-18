@@ -89,21 +89,21 @@ public class StructureCardBuilder {
         setTtx(productCards) ;
     }
 
-    public static String BuildDescription(String greeting) throws IOException {
+    public static String BuildDescription(String search) throws IOException {
 
-        Document document = getPageFromUrl(greeting.toString());
-            StringBuilder oneProductCard = new StringBuilder();
+        Document document = getPageFromUrl(search);
 
-            oneProductCard.append(createFeatures(document))
-                    .append(createCharacteristics(document))
-                    .append(createAdvantages(document))
-                    .append(createComplectation(document))
-                    .append(createWeight(document));
+        String oneProductCard = String.valueOf(createFeatures(document)) +
+                createCharacteristics(document) +
+                createAdvantages(document) +
+                createComplectation(document) +
+                createWeight(document);
 
-        greeting = oneProductCard.toString()
-                .replaceAll(";;",";")
-                .replaceAll("\\.;", ";")
-                .replaceAll("\\.\\.",".");
-        return greeting;
+
+
+            oneProductCard.replaceAll(";;",";")
+                    .replaceAll("\\.;", ";")
+                    .replaceAll("\\.\\.",".");
+         return oneProductCard;
     }
 }
