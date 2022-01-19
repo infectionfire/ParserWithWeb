@@ -23,7 +23,7 @@ public class DataServiceImpl implements DataService {
     @Override
     public boolean persist(Data search) {
         try {
-            dataRepository.persist(new Data(UUID.randomUUID(), search.getUrl(),search.getDescription()));
+            dataRepository.persist(new Data(search.getId(), search.getUrl(),search.getDescription()));
             return true;
         } catch (Exception e) {
             LOG.error("ERROR SAVING DATA: " + e.getMessage(), e);

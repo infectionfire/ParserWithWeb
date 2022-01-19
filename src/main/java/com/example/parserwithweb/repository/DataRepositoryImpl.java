@@ -19,12 +19,12 @@ public class DataRepositoryImpl implements DataRepository<Data> {
     @Override
     public void persist(Data object) {
 
-        Object[] params = new Object[] { object.getId(), object.getDescription(), object.getUrl() };
-        int[] types = new int[] { Types.VARCHAR, Types.VARCHAR, Types.VARCHAR };
+        Object[] params = new Object[] {  object.getDescription(), object.getUrl() };
+        int[] types = new int[] {  Types.VARCHAR, Types.VARCHAR };
 
         jdbcOperations.update("INSERT INTO parse_values(" +
-                "            data_id, data_description, data_url)\n" +
-                "    VALUES (cast(? as UUID), ?, ?);", params, types);
+                "            data_description, data_url)\n" +
+                "    VALUES ( ?, ?);", params, types);
     }
 
     @Override

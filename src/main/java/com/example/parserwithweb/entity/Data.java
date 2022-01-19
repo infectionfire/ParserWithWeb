@@ -1,11 +1,12 @@
 package com.example.parserwithweb.entity;
 
-import java.util.UUID;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 
 
 public class Data implements DomainObject {
-
-    private UUID id;
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private long id;
     private String url;
     private String description;
 
@@ -14,7 +15,7 @@ public class Data implements DomainObject {
 
     }
 
-    public Data(UUID id, String url, String description) {
+    public Data(long id, String url, String description) {
         this.id = id;
         this.url = url;
         this.description = description;
@@ -28,11 +29,11 @@ public class Data implements DomainObject {
         this.url = url;
     }
 
-    public UUID getId() {
+    public long getId() {
         return id;
     }
 
-    public void setId(UUID id) {
+    public void setId(long id) {
         this.id = id;
     }
 
