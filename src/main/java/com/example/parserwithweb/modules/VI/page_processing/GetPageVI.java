@@ -1,5 +1,6 @@
 package com.example.parserwithweb.modules.VI.page_processing;
 
+import com.example.parserwithweb.entity.Data;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 

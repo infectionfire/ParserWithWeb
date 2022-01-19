@@ -1,6 +1,5 @@
-package com.example.parserwithweb.controller;
+package com.example.parserwithweb.exception;
 
-import com.example.parserwithweb.exception.RestException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;

@@ -21,9 +21,9 @@ public class DataServiceImpl implements DataService {
     private DataRepository dataRepository;
 
     @Override
-    public boolean persist(String search) {
+    public boolean persist(Data search) {
         try {
-            dataRepository.persist(new Data(UUID.randomUUID(), search));
+            dataRepository.persist(new Data(UUID.randomUUID(), search.getUrl(),search.getDescription()));
             return true;
         } catch (Exception e) {
             LOG.error("ERROR SAVING DATA: " + e.getMessage(), e);

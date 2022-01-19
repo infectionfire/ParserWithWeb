@@ -2,18 +2,30 @@ package com.example.parserwithweb.entity;
 
 import java.util.UUID;
 
+
 public class Data implements DomainObject {
 
     private UUID id;
-    private String content;
+    private String url;
+    private String description;
 
-    public Data(UUID id, String description) {
-        this.id = id;
-        this.content = description;
-    }
 
     public Data() {
 
+    }
+
+    public Data(UUID id, String url, String description) {
+        this.id = id;
+        this.url = url;
+        this.description = description;
+    }
+
+    public String getUrl() {
+        return url;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
     }
 
     public UUID getId() {
@@ -24,11 +36,11 @@ public class Data implements DomainObject {
         this.id = id;
     }
 
-    public String getContent() {
-        return content;
+    public String getDescription() {
+        return description;
     }
 
-    public void setContent(String content) {
-        this.content = content;
+    public void setDescription(String description) {
+        this.description = description;
     }
 }

@@ -1,6 +1,7 @@
 package com.example.parserwithweb.controller;
 
 import com.example.parserwithweb.entity.Data;
+import com.example.parserwithweb.exception.ExceptionHandlerController;
 import com.example.parserwithweb.service.DataService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -28,12 +29,14 @@ public class DataController extends ExceptionHandlerController {
     @GetMapping(value="/")
     public String greetingForm(Model model) {
         model.addAttribute("search", new Data());
-        return "greeting";
+        return "result";
     }
 
     @PostMapping(value="/search")
     public String greetingSubmit(@ModelAttribute Data data, Model model) throws IOException {
-        data.setContent(BuildDescription(data.getContent()));
+        data.setUrl(data.getDescription());
+        data.setDescription(BuildDescription(data.getDescription()));
+        dataService.persist(data);
         model.addAttribute("search", data);
         return "result";
     }
