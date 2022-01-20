@@ -7,6 +7,7 @@ import org.jsoup.nodes.Document;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 
 import static com.example.parserwithweb.modules.VI.Advantages.createAdvantages;
@@ -64,10 +65,10 @@ public class StructureCardBuilder {
 
     //функции для заполнения ттх
     public static void BuildDescriptions() throws IOException {
-        List<String> productCards = new ArrayList<>(100);
-        List<Document> documentList = getPage();
-        List<String> photoListBuilder = new ArrayList<>(100);
-        List<String> instrListBuilder = new ArrayList<>(100);
+        List<String> productCards = new LinkedList<>();
+        List<Document> documentList = new ArrayList<>(getPage());
+        List<String> photoListBuilder = new LinkedList<>();
+        List<String> instrListBuilder = new LinkedList<>();
         for(Document document:documentList) {
 
             StringBuilder oneProductCard = new StringBuilder();
@@ -93,17 +94,20 @@ public class StructureCardBuilder {
 
         Document document = getPageFromUrl(search);
 
-        String oneProductCard = String.valueOf(createFeatures(document)) +
-                createCharacteristics(document) +
-                createAdvantages(document) +
-                createComplectation(document) +
-                createWeight(document);
+        StringBuilder oneProductCard = new StringBuilder(createFeatures(document)
+                .append(createCharacteristics(document))
+                .append(createAdvantages(document))
+                .append(createComplectation(document))
+                .append(createWeight(document)));
 
+        String resultParseLink =  oneProductCard.toString()
+                .replaceAll(";;", ";")
+                .replaceAll(";;", ";")
+                .replaceAll("\\.;", ";")
+                .replaceAll("\\.;", ";")
+                .replaceAll("\\.\\.", ".")
+                .replaceAll("\\.\\.", ".");
 
-
-            oneProductCard.replaceAll(";;",";")
-                    .replaceAll("\\.;", ";")
-                    .replaceAll("\\.\\.",".");
-         return oneProductCard;
+        return resultParseLink;
     }
 }

@@ -7,7 +7,7 @@
 </head>
 <body>
 <form action="#" th:action="@{/search}" th:object="${search}" method="post">
-    <textarea cols="60" rows="2" th:field="*{description}" onfocus="this.select()">Url: </textarea>
+    <textarea cols="60" rows="2" th:field="*{url}" onfocus="this.select()">Url: </textarea>
     <p><input type="submit" value="Submit" /></p>
 </form>
 <h4>Result</h4>

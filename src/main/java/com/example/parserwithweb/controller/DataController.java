@@ -29,14 +29,14 @@ public class DataController extends ExceptionHandlerController {
     @GetMapping(value="/")
     public String greetingForm(Model model) {
         model.addAttribute("search", new Data());
-        return "result";
+        return "greeting";
     }
 
     @PostMapping(value="/search")
     public String greetingSubmit(@ModelAttribute Data data, Model model) throws IOException {
-        data.setUrl(data.getDescription());
-        data.setDescription(BuildDescription(data.getDescription()));
+        data.setDescription(BuildDescription(data.getUrl()));
         dataService.persist(data);
+        data.setUrl("");
         model.addAttribute("search", data);
         return "result";
     }
