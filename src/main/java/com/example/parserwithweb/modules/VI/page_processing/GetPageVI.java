@@ -24,8 +24,15 @@ public class GetPageVI {
     }
 
 
-    public static Document getPageFromUrl(String url) throws IOException {
+    public static Document getPageFromUrl(String url)  {
         //меняем значение для выбора ссылки, отсчет с нуля
-        return Jsoup.parse(new URL(url), 45000);
+
+        try {
+            return Jsoup.parse(new URL(url), 45000);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        return new Document("Has error");
     }
 }

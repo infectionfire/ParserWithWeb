@@ -93,7 +93,7 @@ public class StructureCardBuilder {
     public static String BuildDescription(String search) throws IOException {
 
         Document document = getPageFromUrl(search);
-
+        System.out.println(document);
         StringBuilder oneProductCard = new StringBuilder(createFeatures(document)
                 .append(createCharacteristics(document))
                 .append(createAdvantages(document))
