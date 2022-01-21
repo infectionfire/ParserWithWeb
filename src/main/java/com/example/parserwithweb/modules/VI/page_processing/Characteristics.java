@@ -1,4 +1,4 @@
-package com.example.parserwithweb.modules.VI;
+package com.example.parserwithweb.modules.VI.page_processing;
 
 import org.jetbrains.annotations.NotNull;
 import org.jsoup.nodes.Document;
@@ -13,7 +13,7 @@ import static com.example.parserwithweb.modules.VI.methods.StringCharacterFormat
  * Формирование поля "технические характеристики" для описания товарной карточки
  */
 
-public class Characteristics{//технические характеристики
+public class Characteristics implements Create{//технические характеристики
     private Characteristics() {
         throw new IllegalStateException("Utility class");
     }

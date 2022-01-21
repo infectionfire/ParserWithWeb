@@ -2,6 +2,7 @@ package com.example.parserwithweb.modules.VI.page_processing;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
+import org.springframework.context.annotation.Scope;
 
 import java.io.IOException;
 import java.net.URL;
@@ -23,7 +24,7 @@ public class GetPageVI {
             return documentList;
     }
 
-
+    @Scope("request")
     public static Document getPageFromUrl(String url)  {
         //меняем значение для выбора ссылки, отсчет с нуля
 

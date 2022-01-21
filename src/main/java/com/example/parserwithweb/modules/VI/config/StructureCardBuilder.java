@@ -1,8 +1,8 @@
 package com.example.parserwithweb.modules.VI.config;
 
 
-import com.example.parserwithweb.modules.VI.ManualCrawler;
-import com.example.parserwithweb.modules.VI.PhotoCrawler;
+import com.example.parserwithweb.modules.VI.page_processing.ManualCrawler;
+import com.example.parserwithweb.modules.VI.page_processing.PhotoCrawler;
 import org.jsoup.nodes.Document;
 
 import java.io.IOException;
@@ -10,11 +10,11 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
-import static com.example.parserwithweb.modules.VI.Advantages.createAdvantages;
-import static com.example.parserwithweb.modules.VI.Characteristics.createCharacteristics;
-import static com.example.parserwithweb.modules.VI.Equipment.createComplectation;
-import static com.example.parserwithweb.modules.VI.Features.createFeatures;
-import static com.example.parserwithweb.modules.VI.Weight.createWeight;
+import static com.example.parserwithweb.modules.VI.page_processing.Advantages.createAdvantages;
+import static com.example.parserwithweb.modules.VI.page_processing.Characteristics.createCharacteristics;
+import static com.example.parserwithweb.modules.VI.page_processing.Equipment.createComplectation;
+import static com.example.parserwithweb.modules.VI.page_processing.Features.createFeatures;
+import static com.example.parserwithweb.modules.VI.page_processing.Weight.createWeight;
 import static com.example.parserwithweb.modules.VI.page_processing.GetPageVI.getPage;
 import static com.example.parserwithweb.modules.VI.page_processing.GetPageVI.getPageFromUrl;
 
@@ -93,7 +93,6 @@ public class StructureCardBuilder {
     public static String BuildDescription(String search) throws IOException {
 
         Document document = getPageFromUrl(search);
-        System.out.println(document);
         StringBuilder oneProductCard = new StringBuilder(createFeatures(document)
                 .append(createCharacteristics(document))
                 .append(createAdvantages(document))

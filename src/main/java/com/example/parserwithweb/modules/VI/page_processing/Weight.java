@@ -1,4 +1,4 @@
-package com.example.parserwithweb.modules.VI;
+package com.example.parserwithweb.modules.VI.page_processing;
 
 import org.jetbrains.annotations.NotNull;
 import org.jsoup.nodes.Document;
@@ -9,7 +9,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Weight{//вес, первая строка - брутто, остальные перекидываем в габариты
+public class Weight implements Create{//вес, первая строка - брутто, остальные перекидываем в габариты
 
     private Weight() {
         throw new IllegalStateException("Utility class");

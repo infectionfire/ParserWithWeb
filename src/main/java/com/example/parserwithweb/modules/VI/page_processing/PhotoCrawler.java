@@ -1,4 +1,4 @@
-package com.example.parserwithweb.modules.VI;
+package com.example.parserwithweb.modules.VI.page_processing;
 
 import org.jetbrains.annotations.NotNull;
 import org.jsoup.nodes.Document;
@@ -11,7 +11,7 @@ import java.io.IOException;
  * можно переделать, сделать сплит через " и вытаскивать ссылки через endWith
  */
 
-public class PhotoCrawler{
+public class PhotoCrawler implements Create{
 
     private static String photo = "";
 

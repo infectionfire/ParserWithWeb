@@ -1,4 +1,4 @@
-package com.example.parserwithweb.modules.VI;
+package com.example.parserwithweb.modules.VI.page_processing;
 
 import com.example.parserwithweb.modules.VI.methods.HtmlToText;
 import org.jetbrains.annotations.NotNull;
@@ -12,7 +12,7 @@ import java.io.IOException;
  *Формирование начального текста описания товарной карточки
  */
 
-public class Features{
+public class Features implements Create{
 
     private Features() {
         throw new IllegalStateException("Utility class");

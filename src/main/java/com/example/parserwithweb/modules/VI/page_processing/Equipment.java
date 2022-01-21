@@ -1,4 +1,4 @@
-package com.example.parserwithweb.modules.VI;
+package com.example.parserwithweb.modules.VI.page_processing;
 
 import org.jetbrains.annotations.NotNull;
 import org.jsoup.nodes.Document;
@@ -11,7 +11,7 @@ import java.io.IOException;
  * Формирование поля "Комплектация" для описания товарной карточки
  */
 
-public class Equipment{
+public class Equipment implements Create{
 
     private Equipment() {
         throw new IllegalStateException("Utility class");

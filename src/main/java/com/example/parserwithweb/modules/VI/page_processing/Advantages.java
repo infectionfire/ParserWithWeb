@@ -1,5 +1,6 @@
-package com.example.parserwithweb.modules.VI;
+package com.example.parserwithweb.modules.VI.page_processing;
 
+import com.example.parserwithweb.modules.VI.page_processing.Create;
 import org.jetbrains.annotations.NotNull;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
@@ -11,7 +12,7 @@ import java.io.IOException;
  * Формирование поля особенности для описания товарной карточки
  */
 
-public class Advantages{//особенности
+public class Advantages implements Create {//особенности
 
     private Advantages() {
         throw new IllegalStateException("Utility class");
