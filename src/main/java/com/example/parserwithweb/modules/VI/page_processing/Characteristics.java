@@ -13,7 +13,7 @@ import static com.example.parserwithweb.modules.VI.methods.StringCharacterFormat
  * Формирование поля "технические характеристики" для описания товарной карточки
  */
 
-public class Characteristics implements Create{//технические характеристики
+public class Characteristics implements Create {//технические характеристики
     private Characteristics() {
         throw new IllegalStateException("Utility class");
     }

@@ -5,17 +5,16 @@ import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Weight implements Create{//вес, первая строка - брутто, остальные перекидываем в габариты
+public class Weight implements Create {//вес, первая строка - брутто, остальные перекидываем в габариты
 
     private Weight() {
         throw new IllegalStateException("Utility class");
     }
     @NotNull
-    public static StringBuilder createWeight(Document document) throws IOException {
+    public static StringBuilder createWeight(Document document){
         StringBuilder weigh = new StringBuilder("<strong>Габаритные размеры:</strong>\n\n");
         //берем страницу
         Document page = document;

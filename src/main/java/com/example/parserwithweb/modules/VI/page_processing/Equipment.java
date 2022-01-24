@@ -11,7 +11,7 @@ import java.io.IOException;
  * Формирование поля "Комплектация" для описания товарной карточки
  */
 
-public class Equipment implements Create{
+public class Equipment implements Create {
 
     private Equipment() {
         throw new IllegalStateException("Utility class");

@@ -1,7 +1,5 @@
 package com.example.parserwithweb.modules.VI.page_processing;
 
-import com.example.parserwithweb.modules.VI.page_processing.Create;
-import org.jetbrains.annotations.NotNull;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
@@ -18,7 +16,6 @@ public class Advantages implements Create {//особенности
         throw new IllegalStateException("Utility class");
     }
 
-    @NotNull
     public static StringBuilder createAdvantages(Document document) throws IOException {
         StringBuilder advantagesCreator = new StringBuilder("<strong>Особенности:</strong>\n\n");
         Element element = document

@@ -3,8 +3,6 @@ package com.example.parserwithweb.controller;
 import com.example.parserwithweb.entity.Data;
 import com.example.parserwithweb.exception.ExceptionHandlerController;
 import com.example.parserwithweb.service.DataService;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
@@ -20,8 +18,6 @@ import static com.example.parserwithweb.modules.VI.config.StructureCardBuilder.B
 
 @Controller
 public class DataController extends ExceptionHandlerController {
-
-    private static final Logger LOG = LoggerFactory.getLogger(DataController.class);
 
     @Autowired
     @Qualifier("dataService")
@@ -42,7 +38,7 @@ public class DataController extends ExceptionHandlerController {
         }
         data.setDescription(BuildDescription(data.getUrl()));
         dataService.persist(data);
-        data.setUrl("");
+        data.setUrl("");//костыль для отображения thymeleaf пустого поля ввода, не собираюсь доделывать фронт
         model.addAttribute("search", data);
         return "result";
     }

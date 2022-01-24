@@ -21,7 +21,7 @@ public class ApachePOIExcelWrite {
 
     public static void main(String[] args) throws IOException {
         final long startTime = System.currentTimeMillis();
-        BuildDescriptions();
+        BuildAnyDescriptions();
         //создание книги
         try (XSSFWorkbook workbook = new XSSFWorkbook()){
         XSSFSheet sheet = workbook.createSheet("ParserFile");

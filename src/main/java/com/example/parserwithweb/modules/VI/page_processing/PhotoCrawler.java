@@ -11,7 +11,7 @@ import java.io.IOException;
  * можно переделать, сделать сплит через " и вытаскивать ссылки через endWith
  */
 
-public class PhotoCrawler implements Create{
+public class PhotoCrawler implements Create {
 
     private static String photo = "";
 

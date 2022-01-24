@@ -17,7 +17,7 @@ public class WriteToFile {
 
     public static void main(String[] args) throws IOException {
         try(PrintWriter pw = new PrintWriter(file)) {
-            StructureCardBuilder.BuildDescriptions();
+            StructureCardBuilder.BuildAnyDescriptions();
             pw.println(StructureCardBuilder.getTtx());
             pw.println("Successfully!");
         }

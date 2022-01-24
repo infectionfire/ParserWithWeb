@@ -11,7 +11,7 @@ import java.io.IOException;
  * в случае отсутствия инструкции в формате PDF возвращает пустую строку для заполнения ячейки в эксель
  */
 
-public class ManualCrawler implements Create{
+public class ManualCrawler implements Create {
     private static String instr = "";
 
 

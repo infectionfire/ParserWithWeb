@@ -12,7 +12,7 @@ import java.io.IOException;
  *Формирование начального текста описания товарной карточки
  */
 
-public class Features implements Create{
+public class Features implements Create {
 
     private Features() {
         throw new IllegalStateException("Utility class");

@@ -23,6 +23,7 @@ import static com.example.parserwithweb.modules.VI.page_processing.GetPageVI.get
  * Файл для составления конфигурации описания
  */
 public class StructureCardBuilder {
+
     private static List<String> ttx = new ArrayList<>(100);//если товаров больше сотки поменять тоже
     private static List<String> photos = new ArrayList<>(100);//если товаров больше сотки поменять тоже
     private static List<String> instr = new ArrayList<>(100);//если товаров больше сотки поменять тоже
@@ -63,8 +64,12 @@ public class StructureCardBuilder {
         throw new IllegalStateException("Utility class");
     }
 
+    public static void SortUrls(String url){
+
+    }
+
     //функции для заполнения ттх
-    public static void BuildDescriptions() throws IOException {
+    public static void BuildAnyDescriptions() throws IOException {
         List<String> productCards = new LinkedList<>();
         List<Document> documentList = new ArrayList<>(getPage());
         List<String> photoListBuilder = new LinkedList<>();
@@ -98,15 +103,14 @@ public class StructureCardBuilder {
                 .append(createAdvantages(document))
                 .append(createComplectation(document))
                 .append(createWeight(document)));
+        if(oneProductCard.length()<160) return "Введите валидную ссылку";
 
-        String resultParseLink =  oneProductCard.toString()
+        return oneProductCard.toString()
                 .replaceAll(";;", ";")
                 .replaceAll(";;", ";")
                 .replaceAll("\\.;", ";")
                 .replaceAll("\\.;", ";")
                 .replaceAll("\\.\\.", ".")
                 .replaceAll("\\.\\.", ".");
-
-        return resultParseLink;
     }
 }
