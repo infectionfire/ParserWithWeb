@@ -27,7 +27,6 @@ public class GetPageVI {
     @Scope("request")
     public static Document getPageFromUrl(String url)  {
         //меняем значение для выбора ссылки, отсчет с нуля
-
         try {
             return Jsoup.parse(new URL(url), 45000);
         } catch (IOException e) {

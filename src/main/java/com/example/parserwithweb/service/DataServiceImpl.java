@@ -16,7 +16,7 @@ public class DataServiceImpl implements DataService {
     private static final Logger LOG = LoggerFactory.getLogger(DataServiceImpl.class);
 
     @Autowired
-    @Qualifier("dataRespitory")
+    @Qualifier("dataRepository")
     private DataRepository dataRepository;
 
     @Override

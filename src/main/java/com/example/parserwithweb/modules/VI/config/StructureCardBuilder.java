@@ -103,9 +103,7 @@ public class StructureCardBuilder {
                 .append(createAdvantages(document))
                 .append(createComplectation(document))
                 .append(createWeight(document)));
-        if(oneProductCard.length()<160) return "Введите валидную ссылку";
-
-        return oneProductCard.toString()
+       return oneProductCard.toString()
                 .replaceAll(";;", ";")
                 .replaceAll(";;", ";")
                 .replaceAll("\\.;", ";")

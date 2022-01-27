@@ -10,7 +10,7 @@ import java.sql.Types;
 import java.util.HashSet;
 import java.util.Set;
 
-@Repository("dataRespitory")
+@Repository("dataRepository")
 public class DataRepositoryImpl implements DataRepository<Data> {
 
     @Autowired

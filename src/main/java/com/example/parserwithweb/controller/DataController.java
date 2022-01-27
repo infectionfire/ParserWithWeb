@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import java.io.IOException;
+import java.util.Map;
 
 import static com.example.parserwithweb.modules.VI.config.StructureCardBuilder.BuildDescription;
 
@@ -34,6 +35,10 @@ public class DataController extends ExceptionHandlerController {
             , BindingResult bindingResult
             , Model model) throws IOException {
         if (bindingResult.hasErrors()) {
+            Map<String, String> errorsMap = ControllerUtils.getErrors(bindingResult);
+
+            model.mergeAttributes(errorsMap);
+            model.addAttribute("data", data);
         return "result";
         }
         data.setDescription(BuildDescription(data.getUrl()));
