@@ -5,15 +5,13 @@ import javax.persistence.GenerationType;
 
 
 public class Data implements DomainObject {
+
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
     private String url;
     private String description;
 
-
-    public Data() {
-
-    }
+    public Data() {}
 
     public Data(long id, String url, String description) {
         this.id = id;

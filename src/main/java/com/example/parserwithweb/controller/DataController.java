@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import java.io.IOException;
 import java.util.Map;
 
-import static com.example.parserwithweb.modules.VI.config.StructureCardBuilder.BuildDescription;
+import static com.example.parserwithweb.modules.VI.config.StructureCardBuilder.BuildDescriptionForOneCard;
 
 @Controller
 public class DataController extends ExceptionHandlerController {
@@ -41,7 +41,7 @@ public class DataController extends ExceptionHandlerController {
             model.addAttribute("data", data);
         return "result";
         }
-        data.setDescription(BuildDescription(data.getUrl()));
+        data.setDescription(BuildDescriptionForOneCard(data.getUrl()));
         dataService.persist(data);
         data.setUrl("");//костыль для отображения thymeleaf пустого поля ввода, не собираюсь доделывать фронт
         model.addAttribute("search", data);
